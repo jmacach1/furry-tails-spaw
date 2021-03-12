@@ -1,3 +1,7 @@
+:root {
+  --bg-image-paws: url("https://c4.wallpaperflare.com/wallpaper/686/355/705/paw-print-background-surface-wallpaper-preview.jpg");
+}
+
 body {
   min-height: 100vh;
   min-width: 350px;
@@ -12,6 +16,14 @@ main {
   width: 350px;
   margin: 0 auto;
   background-color: var(--bs-teal);
+}
+
+.jumbo {
+  background-image: var(--bg-image-paws);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  background-size: cover;
+  padding: 2rem;
 }
 
 /* register */
