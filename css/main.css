@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  padding: 1rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 350px;
+  margin: 0 auto;
+  background-color: var(--bs-teal);
+}
+
+/* register */
+.form-group {
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
