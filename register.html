@@ -5,31 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 104</title>
-  <link rel="stylesheet" href="css/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/custom_theme.css">
+
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper paw-background">
     <main>
       <form class="register">
         
         <!-- name -->
         <div class="form-group">
-          <label for="name">Pet's Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Spotty Pipen">
+          <label for="petName">Pet's Name</label>
+          <input type="text" class="form-control" id="petName" placeholder="Spotty Pipen">
         </div>
         
         <!-- age -->
         <div class="form-group">
-          <label for="age">Age</label>
-          <input type="text" class="form-control" id="age" placeholder="15">
+          <label for="petAge">Age</label>
+          <input type="number" class="form-control" id="petAge" placeholder="15">
         </div>
         
         <!-- gender-->
         <div class="form-group">
-          <label for="gender">Gender</label>
-          <select class="form-control" id="gender">
+          <label for="petGender">Gender</label>
+          <select class="form-control" id="petGender">
             <option>Male</option>
             <option>Female</option>
           </select>
@@ -37,14 +39,14 @@
         
         <!-- breed -->
         <div class="form-group">
-          <label for="breed">Breed</label>
-          <input type="text" class="form-control" id="breed" placeholder="Dalmatian">
+          <label for="petBreed">Breed</label>
+          <input type="text" class="form-control" id="petBreed" placeholder="Dalmatian">
         </div>
         
         <!-- service -->
         <div class="form-group">
-          <label for="service">Service</label>
-          <select class="form-control" id="service">
+          <label for="petService">Service</label>
+          <select class="form-control" id="petService">
             <option>Shower</option>
             <option>Nails Cut</option>
             <option>Full Service</option>
@@ -53,19 +55,24 @@
         
         <!-- owner -->
         <div class="form-group">
-          <label for="owner">Breed</label>
-          <input type="text" class="form-control" id="owner" placeholder="Michael Jordan">
+          <label for="ownerName">Owner</label>
+          <input type="text" class="form-control" id="ownerName" placeholder="Michael Jordan">
         </div>
         
         <!-- phone -->
         <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="text" class="form-control" id="phone" placeholder="555-555-5555">
+          <label for="ownerPhone">Phone</label>
+          <input type="text" class="form-control" id="ownerPhone" placeholder="555-555-5555">
         </div>
+        <button id="addPetBtn" type="submit" class="btn btn-primary">Submit</button>
       </form>
       
+      <div id="petDisplay">
+
+      </div>
     </main>
   </div>
-  <script src="js/main.js"></script>
+  <script src="js/display.js"></script>
+  <script src="js/register.js"></script>
 </body>
 </html>
