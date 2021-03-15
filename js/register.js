@@ -1,22 +1,27 @@
 class Pet {
-  constructor(name, age, gender, breed, service, owner, phone) {
+  constructor(name, age, gender, petType, breed, service, owner, phone) {
     this.name = name;
     this.age = age;
     this.gender = gender;
+    this.petType = petType.slice(2);
     this.breed = breed;
-    this.service= service;
+    this.service = service;
     this.owner = owner;
     this.phone = phone;
+    this.icon = petType.split(" ")[0];
   }
 }
 
-const scooby = new Pet("Scooby", 50, "male", "Dane", "Full Service", "Shaggy", "555-555-5555");
-const scrappy = new Pet("Scrappy", 20, "male", "Dane", "Nails Cut", "Shaggy", "555-555-5555");
+const scooby = new Pet(
+  "Scooby", 50, "male", "🐶 Dog", "Dane", "Full Service", "Shaggy", "555-555-5555");
+const scrappy = new Pet(
+  "Scrappy", 20, "male", "🐶 Dog", "Dane", "Nails Cut", "Shaggy", "555-555-5555");
 const pets = [scooby, scrappy];
 
 const petNameInput = document.getElementById('petName');
 const petAgeInput = document.getElementById('petAge');
 const petGenderInput = document.getElementById('petGender');
+const petTypeInput = document.getElementById('petType');
 const petBreedInput = document.getElementById('petBreed');
 const petServiceInput = document.getElementById('petService');
 const ownerNameInput = document.getElementById('ownerName');
@@ -24,16 +29,16 @@ const ownerPhoneInput = document.getElementById('ownerPhone');
 const addPetBtn = document.getElementById('addPetBtn');
 
 function getNewPet() {
-  const pet = new Pet(
+  return new Pet(
     petNameInput.value,
     petAgeInput.value, 
     petGenderInput.value, 
+    petTypeInput.value, 
     petBreedInput.value, 
     petServiceInput.value, 
     ownerNameInput.value, 
     ownerPhoneInput.value
   );
-  return pet;
 }
 
 function register() {
