@@ -4,6 +4,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   min-width: 350px;
   background-image: var(--bg-image-paws);
@@ -13,22 +15,22 @@ body {
   background-blend-mode: lighten;
 }
 
-main,
-.nav-container,
-.jumbo,
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
+
 .content {
   min-width: 350px;
   max-width: 900px;
   margin: 0 auto;
-}
-
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  padding: 1rem;
-  background-color: black;
-  color: white;
 }
 
 .jumbotron {
@@ -44,12 +46,18 @@ footer {
 /* register */
 
 .register-form {
-  max-width: 460px;
+  width: 100%;
 }
 
-.form-group {
+.form-group,
+.button_div {
+  max-width: 600px;
   background-color: transparent;
   margin-bottom: 1rem;
+}
+
+.button_div {
+  text-align: right;
 }
 
 #petDisplay {
