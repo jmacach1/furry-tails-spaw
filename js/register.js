@@ -13,9 +13,9 @@ class Pet {
 }
 
 const scooby = new Pet(
-  "Scooby", 50, "male", "🐶 Dog", "Dane", "Full Service", "Shaggy", "555-555-5555");
+  "Scooby", 50, "male", "🐶 Dog", "Dane", "💯 Full Service", "Shaggy", "555-555-5555");
 const scrappy = new Pet(
-  "Scrappy", 20, "male", "🐶 Dog", "Dane", "Nails Cut", "Shaggy", "555-555-5555");
+  "Scrappy", 20, "male", "🐶 Dog", "Dane", "✂️ Nails Cut", "Shaggy", "555-555-5555");
 const pets = [scooby, scrappy];
 
 const petNameInput = document.getElementById('petName');
@@ -41,8 +41,26 @@ function getNewPet() {
   );
 }
 
+function validatePet(pet) {
+  if (
+    pet.name == "" ||
+    pet.age == "" ||
+    pet.gender == "" ||
+    pet.age == "" ||
+    pet.breed == "" ||
+    pet.service == "" ||
+    pet.owner == "" ||
+    pet.phone == ""
+  ) {
+    alert("Invalid Pet Input")
+    return false;
+  };
+  return true;
+}
+
 function register() {
   const new_pet = getNewPet();
+  if (!validatePet(new_pet)) return;
   console.log(new_pet);
   pets.push(new_pet);
   console.log(pets);
