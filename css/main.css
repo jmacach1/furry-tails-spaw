@@ -33,6 +33,16 @@ footer {
   margin: 0 auto;
 }
 
+.flexrow {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1 0;
+}
+
 /* header */
 .dog-icon {
   height: 2rem;
