@@ -22,7 +22,7 @@ const servicePriceColor = [
   {
     service: "Nails Cut",
     price: 30,
-    color: blue
+    color: green
   }
 ];
 
@@ -60,10 +60,11 @@ function createCard(pet) {
 function display() {
   const displayDiv = document.getElementById('petDisplay');
   const cards = [];
-  for (const pet of pets) {
+  for (const pet of salon.pets) {
     cards.push(createCard(pet));
   }
   displayDiv.innerHTML = cards.join(' ');
 }
 
+display();
 

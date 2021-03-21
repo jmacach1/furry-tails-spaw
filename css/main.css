@@ -33,6 +33,12 @@ footer {
   margin: 0 auto;
 }
 
+/* header */
+.dog-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
 .jumbotron {
   background-color: transparent;
   margin: 0;
