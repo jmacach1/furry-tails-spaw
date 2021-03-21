@@ -56,6 +56,23 @@ function createCard(pet) {
   `;
 }
 
+function countPets() {
+  for (const pet of salon.pets) {
+    if (!(pet.petType in salon.petCount)) return;
+    salon.countPets[petType] += 1;
+  }
+}
+
+function createCountCard(key, value) {
+  return `
+  <div class="card">
+    <div class="card-body">
+      <p class="card-text">${key}: ${value}</p>
+    </div>
+  </div>
+`;
+}
+
 
 function display() {
   const displayDiv = document.getElementById('petDisplay');
@@ -64,6 +81,14 @@ function display() {
     cards.push(createCard(pet));
   }
   displayDiv.innerHTML = cards.join(' ');
+
+  countPets();
+  const petCountsDisplay = document.getElementById('petCounts');
+  const counts = []
+  for (const [key, value] of Object.entries(salon.petCount)) {
+    counts.push(createCountCard(key,value));
+  }
+  petCountsDisplay.innerHTML = counts.join('');
 }
 
 display();

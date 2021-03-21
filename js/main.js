@@ -22,7 +22,7 @@ const salon = {
     open: '10:00 am',
     close: '5:00 pm'
   },
-  petTypes: ["Bird", "Bunny", "Cat", "Dog", "Hamster", "Mouse", "Rat", "Monkey", "Other"], 
+  petTypes: ["🐦 Bird", "🐱 CatCat", "🐶 Dog"], 
   pets: [
     new Pet("Scooby", 50, "male", "🐶 Dog", "Dane", "💯 Full Service", "Shaggy","555-555-5555"),
     new Pet("Scrappy", 10, "male", "🐶 Dog", "Dane", "✂️ Nails Cut", "Shaggy", "555-555-5555"),

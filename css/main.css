@@ -66,7 +66,8 @@ footer {
   text-align: right;
 }
 
-#petDisplay {
+#petDisplay,
+#petCounts {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -83,4 +84,9 @@ footer {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* about */
+.about-img {
+  width: 80%;
 }
