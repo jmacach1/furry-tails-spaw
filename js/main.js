@@ -3,7 +3,7 @@ class Pet {
     this.name = name;
     this.age = age;
     this.gender = gender;
-    this.petType = petType.slice(2);
+    this.petType = petType;
     this.breed = breed;
     this.service = service;
     this.owner = owner;
@@ -22,7 +22,7 @@ const salon = {
     open: '10:00 am',
     close: '5:00 pm'
   },
-  petTypes: ["🐦 Bird", "🐱 CatCat", "🐶 Dog"], 
+  petTypes: ["🐦 Bird", "🐱 Cat", "🐶 Dog"], 
   pets: [
     new Pet("Scooby", 50, "male", "🐶 Dog", "Dane", "💯 Full Service", "Shaggy","555-555-5555"),
     new Pet("Scrappy", 10, "male", "🐶 Dog", "Dane", "✂️ Nails Cut", "Shaggy", "555-555-5555"),
@@ -32,9 +32,10 @@ const salon = {
     new Pet("Rajah", 24, "female", "🐱 Cat", "Tiger", "🐾 Nails Cut", "Jasmine", "756-221-3535"),
     new Pet("Daisy", 24, "female", "🐦 Bird", "White Duck", "🛁 Shower", "Walt", "751-221-3535"),
   ],
-  petCount: {}
+  petCounts: {}
 }
 
 for (const petType of salon.petTypes) {
-  salon.petCount[petType] = 0;
+  console.log(petType)
+  salon.petCounts[petType] = 0;
 }

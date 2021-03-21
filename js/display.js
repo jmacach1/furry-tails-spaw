@@ -58,8 +58,8 @@ function createCard(pet) {
 
 function countPets() {
   for (const pet of salon.pets) {
-    if (!(pet.petType in salon.petCount)) return;
-    salon.countPets[petType] += 1;
+    if (!(pet.petType in salon.petCounts)) continue;
+    salon.petCounts[pet.petType] += 1;
   }
 }
 
@@ -85,11 +85,11 @@ function display() {
   countPets();
   const petCountsDisplay = document.getElementById('petCounts');
   const counts = []
-  for (const [key, value] of Object.entries(salon.petCount)) {
+  for (const [key, value] of Object.entries(salon.petCounts)) {
     counts.push(createCountCard(key,value));
   }
   petCountsDisplay.innerHTML = counts.join('');
 }
 
 display();
-
+console.log(salon);
