@@ -93,7 +93,27 @@ footer {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+.delete-pet-btn {
+  background-color: lightpink;
+  border: none;
+  width: fit-content;
+  border-radius: 50%;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+.card:hover .delete-pet-btn {
+  opacity: 0.7;
+}
+
+.card:hover .delete-pet-btn:hover {
+  opacity: 1;
 }
 
 /* about */

@@ -34,16 +34,18 @@ function getPriceColorByService(serviceInput) {
   }
   return { service: serviceInput, price: 0, color: red }
 }
-
+ 
 function createCard(pet) {
   const spc = getPriceColorByService(pet.service);
   pet.price = spc.price;
   return `
-    <div class="card" style="width: 15rem; background-color: ${spc.color};">
+    <div id="${pet.id}" class="card" style="width: 15rem; background-color: ${spc.color};">
+      
       <div class="card-header">
         <h5 class="card-title">${pet.name} ${pet.icon}</h5>
         <h6 class="card-subtitle mb-2">Owned by: ${pet.owner}</h6>
         <h6 class="card-subtitle mb-2">Phone: ${pet.phone}</h6>
+        <button class="delete-pet-btn" onclick="deletePet(${pet.id})">❌</button>
       </div>
       <div class="card-body">
         <p class="card-text">Age: ${pet.age}</p>
@@ -75,8 +77,8 @@ function createCountCard(key, value) {
 }
 
 
+const displayDiv = document.getElementById('petDisplay');
 function display() {
-  const displayDiv = document.getElementById('petDisplay');
   const cards = [];
   for (const pet of salon.pets.values()) {
     cards.push(createCard(pet));
@@ -94,3 +96,30 @@ function display() {
 
 display();
 console.log(salon);
+
+// Search
+const searchPetInput = document.getElementById('searchPet');
+searchPetInput.addEventListener('submit', function(event) {
+  event.preventDefault();
+  console.log(event.target);
+  const searchText = event.target.searchInput.value.toLowerCase();
+  console.log(searchText);
+  if (searchText === "") {
+    console.log("searchText", searchText)
+    display();
+    return
+  }
+  const pets = [...salon.pets.values()];
+  
+  const filteredPets = pets.filter((pet) => {
+    const nameMatches = pet.name.toLowerCase().includes(searchText);
+    const serviceMatches = pet.service.toLowerCase().includes(searchText);
+    return nameMatches || serviceMatches;
+  });
+
+  const cards = []
+  for (const pet of filteredPets) {
+    cards.push(createCard(pet));
+  }
+  displayDiv.innerHTML = cards.join(' ');
+});

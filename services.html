@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/custom_theme.css" />
 
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/services.css" />
   </head>
   <body>
     <header class="header-in bg-primary">
@@ -68,23 +69,38 @@
     <div class="jumbotron">
       <div class="content">
         <h1 class="display-4">Services</h1>
-        <h1></h1>
-        <p class="lead">
-          <strong>🚧 🚧 🚧 Under Construction 🚧 🚧 🚧</strong>
-        </p>
-        <hr class="my-4" />
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="register.html" role="button"
-            >Register Meow!</a
-          >
-        </p>
       </div>
     </div>
 
-    <main class="main-ser"></main>
+    <main class="main-ser">
+      <div class="services content">
+        <div class="tab">
+          <button class="tablink active" data-tab="1">A</button>
+          <button class="tablink" data-tab="2">B</button>
+          <button class="tablink" data-tab="3">C</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="tabcontent1" class="tabcontent show-tab">
+          <h3>London</h3>
+          <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="tabcontent2" class="tabcontent">
+          <h3>Paris</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="tabcontent3" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </div>
+    </main>
 
     <footer class="footer-ser"></footer>
 
     <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
   </body>
 </html>

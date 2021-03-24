@@ -50,4 +50,9 @@ addPetBtn.addEventListener('click', function(e) {
   register();
 });
 
+function deletePet(petId) {
+  salon.pets.delete(petId);
+  display();
+}
+
 
