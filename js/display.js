@@ -3,33 +3,34 @@ const yellow = `rgba(255, 193, 7, .5)`;
 const green = `rgba(40, 167, 69, .5)`;
 const purple = `rgba(110, 66, 193, .5)`;
 const red = `rgba(220, 53, 70, .4)`;
-const servicePriceColor = [
-  {
+const servicePriceColor = {
+  "Full Service": {
     service: "Full Service",
     price: 100,
     color: purple
   },
-  {
+  "Shower": {
     service: "Shower",
     price: 60,
     color: blue
   },
-  {
+  "Hair Cut": {
     service: "Hair Cut",
     price: 40,
     color: yellow
   },
-  {
+  "Nails Cut": {
     service: "Nails Cut",
     price: 30,
     color: green
   }
-];
+};
 
 function getPriceColorByService(serviceInput) {
+
   service = serviceInput.slice(3);
-  for (let spc of servicePriceColor) {
-    if (service === spc.service) return spc;
+  if (service in servicePriceColor) {
+    return servicePriceColor[service];
   }
   return { service: serviceInput, price: 0, color: red }
 }
@@ -57,7 +58,7 @@ function createCard(pet) {
 }
 
 function countPets() {
-  for (const pet of salon.pets) {
+  for (const pet of salon.pets.values()) {
     if (!(pet.petType in salon.petCounts)) continue;
     salon.petCounts[pet.petType] += 1;
   }
@@ -77,7 +78,7 @@ function createCountCard(key, value) {
 function display() {
   const displayDiv = document.getElementById('petDisplay');
   const cards = [];
-  for (const pet of salon.pets) {
+  for (const pet of salon.pets.values()) {
     cards.push(createCard(pet));
   }
   displayDiv.innerHTML = cards.join(' ');

@@ -17,11 +17,11 @@ function getNewPet() {
     petServiceInput.value, 
     ownerNameInput.value, 
     ownerPhoneInput.value
-    );
+  );
 }
 
 function validatePet(pet) {
-  if (
+  return !(
     pet.name == "" ||
     pet.age == "" ||
     pet.gender == "" ||
@@ -30,19 +30,17 @@ function validatePet(pet) {
     pet.service == "" ||
     pet.owner == "" ||
     pet.phone == ""
-    ) {
-    alert("Invalid Pet Input")
-    return false;
-  };
-  return true;
+  );
 }
 
 function register() {
-  const new_pet = getNewPet();
-  if (!validatePet(new_pet)) return;
-  console.log(new_pet);
-  salon.pets.push(new_pet);
-  console.log(pets);
+  const pet = getNewPet();
+  const invalid = !validatePet(pet);
+  if (invalid) {
+    alert("Invalid Pet Input");
+    return;
+  }
+  salon.pets.set(pet.id, pet);
   display();
 }
 
@@ -51,4 +49,5 @@ addPetBtn.addEventListener('click', function(e) {
   e.preventDefault();
   register();
 });
+
 
