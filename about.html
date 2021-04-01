@@ -17,7 +17,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/custom_theme.css" />
-
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -65,15 +64,6 @@
       </nav>
     </header>
 
-    <div class="jumbotron">
-      <div class="content">
-        <h1 class="display-4">About Furry Tails sPaw</h1>
-        <h1></h1>
-        <img src="img/tub-mascots.png" alt="pets in a tub" class="about-img" />
-        <p class="lead"><strong>The Best at Grooming Pets.</strong></p>
-      </div>
-    </div>
-
     <main class="main-ab">
       <div class="content flexrow">
         <div class="card col">
@@ -90,32 +80,73 @@
             </p>
           </div>
           <div class="card-header">
-            <h3>Contact</h3>
+            <h3>Contact Us</h3>
           </div>
           <div class="card-body">
-            <p>Location: 235 Alton Parkway Suite 200, Irvine, CA</p>
-            <p>Phone: 123-246-3690</p>
-            <p>Email: pets@furrytailsspaw.com</p>
+            <form id="contactUs">
+              <div class="form-group">
+                <label for="petOwnerName">Pet Owner's Name *</label>
+                <input
+                  type="text"
+                  id="petOwnerName"
+                  name="petOwnerName"
+                  placeholder="Your name.."
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="petType">Pet Type *</label>
+                <select id="petType" class="form-control">
+                  <option>🐦 Bird</option>
+                  <option>🐱 Cat</option>
+                  <option>🐶 Dog</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="My message.."
+                  style="height: 200px"
+                  class="form-control"
+                ></textarea>
+              </div>
+
+              <input type="submit" class="btn btn-primary" value="Submit" />
+            </form>
           </div>
         </div>
 
-        <div class="card" style="width: 15rem">
+        <div class="card" style="width: 300px">
+          <div class="card-header">
+            <h5 class="card-title">Website Developer</h5>
+          </div>
           <img src="img/dev.jpg" class="card-img-top" alt="web-developer" />
           <div class="card-body">
-            <h5 class="card-title">Web Developer</h5>
-            <p class="card-text">Awesome JavaScript Ninja.</p>
-            <a
-              href="https://portfolium.com/jerald-macachor"
-              class="btn btn-primary"
-              >Portfolio</a
-            >
+            <p class="card-text">JavaScript Ninja.</p>
+            <p>Loves pets, guitar, and salsa dancing.</p>
+            <p>
+              <a
+                href="https://portfolium.com/jerald-macachor"
+                class="btn btn-primary"
+                >Portfolio</a
+              >
+            </p>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="footer-ab"></footer>
-
-    <script src="js/main.js"></script>
+    <footer>
+      <div class="content">
+        <p>Location: 235 Alton Parkway Suite 200, Irvine, CA</p>
+        <p>Phone: 123-246-3690</p>
+        <p>Copyright (C) Furry Tail sPaw. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/about.js"></script>
   </body>
 </html>

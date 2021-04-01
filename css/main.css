@@ -1,5 +1,5 @@
 :root {
-  --bg-image-paws: url("https://c4.wallpaperflare.com/wallpaper/686/355/705/paw-print-background-surface-wallpaper-preview.jpg");
+  --bg-image-paws: url("../img/paws_pink_tint.jpg");
   --white50: rgb(255, 255, 255, 0.5);
 }
 
@@ -9,10 +9,6 @@ body {
   min-height: 100vh;
   min-width: 350px;
   background-image: var(--bg-image-paws);
-  background-color: rgba(244, 247, 255, 0.85);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: lighten;
 }
 
 main {
@@ -27,6 +23,7 @@ footer {
   color: white;
 }
 
+/* utility*/
 .content {
   min-width: 350px;
   max-width: 900px;
@@ -59,10 +56,31 @@ footer {
   margin: 0 auto;
 }
 
+/* index */
+.welcome {
+  padding: 2rem;
+}
+.pets-in-tub-img {
+  width: 50%;
+}
+
+.register-meow {
+  text-align: right;
+}
+
+/* about */
+.card-img-top {
+  margin: 1rem auto;
+  width: 80%;
+}
+
 /* register */
+.main-reg {
+  padding: 2rem 0;
+}
 
 .register-form {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .form-group,
@@ -116,7 +134,6 @@ footer {
   opacity: 1;
 }
 
-/* about */
-.about-img {
-  width: 80%;
+.pet-card p {
+  margin: 0;
 }

@@ -65,14 +65,9 @@
       </nav>
     </header>
 
-    <div class="jumbotron">
-      <div class="content">
-        <h1 class="display-5">Register Your Pet</h1>
-      </div>
-    </div>
-
-    <main class="main-reg">
+    <main class="card main-reg">
       <form class="register-form content">
+        <h1>Register Your Pet</h1>
         <!-- name -->
         <div class="form-group">
           <label for="petName">Pet's Name *</label>
@@ -173,6 +168,7 @@
           </button>
         </div>
       </form>
+      <div id="alertDiv" class="content"></div>
       <div id="petCounts" class="content"></div>
       <div id="searchPet" class="content">
         <form id="searchPet">
@@ -184,6 +180,8 @@
               name="seachInput"
               class="form-control"
             />
+          </div>
+          <div class="button_div">
             <input type="submit" class="btn btn-primary" value="Search" />
           </div>
         </form>
@@ -191,8 +189,10 @@
       <div id="petDisplay" class="content"></div>
     </main>
 
-    <footer class="footer-reg">
+    <footer>
       <div class="content">
+        <p>Location: 235 Alton Parkway Suite 200, Irvine, CA</p>
+        <p>Phone: 123-246-3690</p>
         <p>Copyright (C) Furry Tail sPaw. All rights reserved.</p>
       </div>
     </footer>

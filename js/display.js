@@ -1,7 +1,7 @@
-const blue = `rgba(0, 123, 255, .5)`;
-const yellow = `rgba(255, 193, 7, .5)`;
-const green = `rgba(40, 167, 69, .5)`;
-const purple = `rgba(110, 66, 193, .5)`;
+const blue = `rgba(0, 123, 255, .4)`;
+const yellow = `rgba(255, 193, 7, .4)`;
+const green = `rgba(40, 167, 69, .4)`;
+const purple = `rgba(110, 66, 193, .4)`;
 const red = `rgba(220, 53, 70, .4)`;
 const servicePriceColor = {
   "Full Service": {
@@ -39,7 +39,7 @@ function createCard(pet) {
   const spc = getPriceColorByService(pet.service);
   pet.price = spc.price;
   return `
-    <div id="${pet.id}" class="card" style="width: 15rem; background-color: ${spc.color};">
+    <div id="${pet.id}" class="card pet-card" style="width: 15rem; background-color: ${spc.color};">
       
       <div class="card-header">
         <h5 class="card-title">${pet.name} ${pet.icon}</h5>

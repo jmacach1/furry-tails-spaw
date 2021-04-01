@@ -41,6 +41,7 @@ function register() {
     return;
   }
   salon.pets.set(pet.id, pet);
+  alertAdd()
   display();
 }
 
@@ -52,7 +53,24 @@ addPetBtn.addEventListener('click', function(e) {
 
 function deletePet(petId) {
   salon.pets.delete(petId);
+  alertDelete()
   display();
 }
 
+const alertDiv = document.getElementById('alertDiv');
+function alertAdd() {
+  alertDiv.innerHTML = `
+    <div class="alert alert-success" role="alert">
+      Congratulations, a Pet was added.
+    </div>
+  `;
+}
 
+
+function alertDelete() {
+  alertDiv.innerHTML = `
+    <div class="alert alert-danger" role="alert">
+      A Pet was deleted.
+    </div>
+  `;
+}
